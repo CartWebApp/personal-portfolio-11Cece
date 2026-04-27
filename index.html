@@ -8,13 +8,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="persona.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Celine's Persona</h1>
-        <script src="persona.js"></script>
-    </div>
-    
-    <footer>
-        <p>&copy; 2024 Celine's Persona. All rights reserved.</p>
+     <!-- Homepage -->
+  <section id="home">
+    <h1>Celine's Persona</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
+ 
+  <!-- About me -->
+  <section id="about">
+    <h2>Get to Know Me</h2>
+ 
+    <article id="about-me">
+      <h3>About Me</h3>
+      <p>
+        Hi! I'm Celine — a creative developer with a passion for design and technology.
+        I love building interfaces that blend visual storytelling with clean, functional code.
+        Currently exploring the intersection of art and programming.
+      </p>
+    </article>
+ 
+    <article id="hobbies">
+      <h3>My Hobbies</h3>
+      <ul>
+        <li>Drawing and digital illustration</li>
+        <li>Playing video games and exploring game design</li>
+        <li>Listening to music and discovering new artists</li>
+        <li>Journaling about fun events that occured in my life</li>
+      </ul>
+    </article>
+ 
+    <article id="interests">
+      <h3>My Interests</h3>
+      <ul>
+        <li></li>
+        <li>Limbus Company</li>
+        <li></li>
+        <li></li>
+      </ul>
+    </article>
+  </section>
+ 
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>Download my resume</p>
+    <a href="resume.pdf" download>Resume</a>
+  </section>
+ 
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+ 
+    <article>
+      <h3>Web Case Studies</h3>
+      <p>A web application built with React and Node.js featuring real-time data visualization.</p>
+      <a href="#">View project</a>
+    </article>
+ 
+    <article>
+      <h3>Writing Case Studies</h3>
+      <p>Mobile-first UI redesign increasing user engagement through intuitive navigation.</p>
+      <a href="#">View project</a>
+    </article>
+ 
+    <article>
+      <h3>Art Gallery</h3>
+      <p>These are art illustrations I've created in my free time, however it's only drawn traditionally.</p>
+      <a href="#">View project</a>
+    </article>
+  </section>
+ 
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contacts</h2>
+    <h3>Thank you for visiting!</h3>
+    <p>I'm always looking to learn and collaborate on new ideas. Let's connect!</p>
+ 
+    <address>
+      <p>Phone: <a href="tel:5597796913">(559) 779-6913</a></p>
+      <p>Email: <a href="mailto:celineelbanna74@gmail.com">celineelbanna74@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/11Cece" target="_blank">https://github.com/11Cece</a></p>
+    </address>
+ 
+    <form action="#" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" required />
+ 
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required />
+ 
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+ 
+      <button type="submit">Send message</button>
+    </form>
+  </section>
+ 
+</body>
+</html>
 </html>
