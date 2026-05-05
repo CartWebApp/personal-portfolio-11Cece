@@ -57,12 +57,48 @@ h1 {
 
 #about-me h3 {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
    justify-content: center;
-    color: #58DDFF;
-    font-size: 4rem;
+    color: #77FEFC;
+    font-size: 6rem;
     display: inline-block;
     transform: skewX(-5deg);
+    transform: skew(-15deg) rotate(-5deg);
 }
 
+#resume h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    color: #16CFFB;
+    font-size: 6rem;
+    display: inline-block;
+    transform: skewX(-5deg);
+    transform: skew(-15deg) rotate(-5deg);
+}
+
+#portfolio h2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    justify-content: center;
+    color: #77FEFC;
+    font-size: 6rem;
+    display: inline-block;
+    transform: skewX(-5deg);
+    transform: skew(-15deg) rotate(-5deg);
+}
+
+#contact h2 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    justify-content: center;
+    color: #16CFFB;
+    font-size: 6rem;
+    display: inline-block;
+    transform: skewX(-5deg);
+    transform: skew(-15deg) rotate(-5deg);
+}
