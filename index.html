@@ -14,7 +14,7 @@
 
 <body>
   <!-- Homepage -->
-  <section id="home">
+  <header id="home">
     <div id="bg-video">
       <video autoplay muted playsinline id="bg-video1">
         <source src="p3intro.mp4" type="video/mp4">
@@ -24,32 +24,28 @@
       </video>
     </div>
 
-    
- 
     <div class="home-content">
       <h1>Celine's Persona</h1>
       <nav>
         <ul>
-          <li><a href="#about">About me</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about.html">About me</a></li>
+          <li><a href="#resume.html">Resume</a></li>
+          <li><a href="#portfolio.html">Portfolio</a></li>
+          <li><a href="#contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
-  </section>
+  </header>
   
-
+<main>
   <!-- About me -->
-  <section id="about">
-    <article>
+  <div id="about">
       <button class="menu-button" id="about-me-button">About Me</button>
       <p>
         Hi! I'm Celine — An artist and designer focused on figures and free spirited designs of digital and
         traditional media. My 5 year vision is to be a graphic fesign candidate at Fresno State. </p>
-    </article>
 
-    <article id="CART-Reflection"></article>
+    <div id="CART-Reflection">
     <h3>CART Reflection</h3>
     <p>
       CART has been a great experience for me as it has allowed me to explore my interests and develop new skills. I
@@ -64,17 +60,17 @@
       animations, and pursuasive media. Overall, CART has
       been an enriching experience that has helped me gain confidence in my abilities and prepare myself for my future.
     </p>
-    </article>
+    </div>
 
-    <article id="Certifications-and-Awards">
+    <div id="Certifications-and-Awards">
       <h3>Certifications and Awards / Achievements</h3>
       <ul>
         <li>Graphic Design Completion Certificate</li>
         <li>Placed Top 3 for best CART Promo Media Campaign</li>
       </ul>
-    </article>
+    </div>
 
-    <article id="hobbies">
+    <div id="hobbies">
       <h3>My Hobbies</h3>
       <ul>
         <li>Drawing traditional and digital illustration</li>
@@ -83,44 +79,44 @@
         <li>Watching anime and reading manga</li>
         <li>Journaling</li>
       </ul>
-    </article>
-  </section>
+    </div>
+  </div>
+
 
   <!-- Resume -->
-  <section id="resume">
+  <div id="resume">
     <button class="menu-button" id="resume-button">Resume</button>
     <p>Download my resume</p>
     <a href="resume.pdf" download>Resume</a>
-  </section>
+  </div>
 
   <!-- Portfolio -->
-  <section id="portfolio">
+  <div id="portfolio">
     <button class="menu-button" id="portfolio-button">Portfolio</button>
-
-    <article>
+    <div>
       <h3>Web Case Studies</h3>
       <p>EECU Wise-Up Budget Calculator. This project is to build a Financial Literacy Web App that helps students
         transition from high school to the workforce. Using real-world data from a Career API, the app should calculate
         exactly how much money a person actually takes home after the government takes its share, and whether their
         lifestyle choices lead to a "Surplus" (Savings) or a "Shortfall" (Debt).</p>
       <a href="#">View projects</a>
-    </article>
+      </div>
 
-    <article>
+    <div>
       <h3>Writing Case Studies</h3>
       <p>.</p>
       <a href="#">View projects</a>
-    </article>
+    </div>
 
-    <article>
+    <div>
       <h3>Art Gallery</h3>
       <p>These are art illustrations I've created in my free time, however it's only drawn traditionally.</p>
       <a href="#">View project</a>
-    </article>
-  </section>
+    </div>
+  </main>
 
   <!-- Contact -->
-  <section id="contact">
+  <footer id="contact">
     <button class="menu-button" id="contact-button">Contact</button>
     <h3>Thank you for visiting!</h3>
     <p>I'm always looking to learn and collaborate on new ideas. Let's connect!</p>
@@ -143,9 +139,7 @@
 
         <button type="submit">Send message</button>
       </form>
-  </section>
-
+      </address>  
+    </footer>
 </body>
-
-
 </html>
