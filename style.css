@@ -54,6 +54,7 @@ h1 {
     justify-content: flex-start;
     color: black;
     font-size: 4rem;
+    transform: rotate(20deg);
 }
 
 .menu-button {
@@ -113,3 +114,4 @@ h1 {
     color: red;
     cursor: pointer;
 }
+
