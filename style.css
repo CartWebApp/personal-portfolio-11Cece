@@ -18,6 +18,10 @@ button {
     font-weight: 400;
     font-style: normal;
   }
+
+  nav button {
+    transform:  translateY(1000px);
+  }
   
 #menu-screen {
     position: relative;
@@ -60,6 +64,8 @@ h1 {
 .menu-button {
     background-color: transparent;
     border: none;
+    transform: translateX(50vw) skew(-15deg) rotate(-5deg);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 #about-me-button {
@@ -70,8 +76,6 @@ h1 {
     color: #77FEFC;
     font-size: 6rem;
     display: inline-block;
-    transform: skewX(-5deg);
-    transform: skew(-15deg) rotate(-5deg);
 }
 
 #resume-button {
@@ -82,8 +86,6 @@ h1 {
     color: #16CFFB;
     font-size: 6rem;
     display: inline-block;
-    transform: skewX(-5deg);
-    transform: skew(-15deg) rotate(-5deg);
 }
 
 #portfolio-button {
@@ -94,8 +96,6 @@ h1 {
     color: #77FEFC;
     font-size: 6rem;
     display: inline-block;
-    transform: skewX(-5deg);
-    transform: skew(-15deg) rotate(-5deg);
 }
 
 #contact-button {
@@ -106,8 +106,6 @@ h1 {
     color: #16CFFB;
     font-size: 6rem;
     display: inline-block;
-    transform: skewX(-5deg);
-    transform: skew(-15deg) rotate(-5deg);
 }
 
 #about-me-button:hover, #resume-button:hover, #portfolio-button:hover, #contact-button:hover {
