@@ -57,9 +57,15 @@ h1 {
     transform: rotate(20deg);
 }
 
+
 .menu-button {
     background-color: transparent;
     border: none;
+}
+
+
+nav {
+    z-index: 100;
 }
 
 #about-me-button {

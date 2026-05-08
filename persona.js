@@ -18,3 +18,6 @@ const aboutMeButton = document.getElementById('about-me-button');
 const resumeButton = document.getElementById('resume-button');
 const portfolioButton = document.getElementById('portfolio-button');
 const contactButton = document.getElementById('contact-button');
+aboutMeButton.addEventListener('click', () => {
+    window.location.href = 'about.html';
+});
