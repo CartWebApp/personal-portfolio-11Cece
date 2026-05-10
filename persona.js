@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
     // setup video elements
@@ -34,6 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 button.style.transform = "translateX(0) skew(-15deg) rotate(-5deg)";
             }, baseDelay + (index * staggerDelay));
         });
+
+        const homeTitle = document.getElementById('home-title');
+        setTimeout(() => {
+            homeTitle.style.transform = "translateY(0) rotate(20deg)";
+        }, 1500);
     }
 
     // add event listeners for buttons
@@ -52,4 +56,5 @@ document.addEventListener("DOMContentLoaded", () => {
     contactButton.addEventListener('click', () => {
         window.location.href = 'contact.html';
     });
+
 });
