@@ -60,3 +60,35 @@
             if (btnRB) btnRB.addEventListener('click', () => goTo(current + 1));
         }
     });
+
+    //About me page animation 
+    document.addEventListener("DOMContentLoaded", () => {
+        
+        const aboutMe = document.getElementById('about-me-party');
+        const resume = document.getElementById('resume-party');
+        const portfolio = document.getElementById('portfolio-party');
+        const backBtn = document.getElementById('back-btn');
+        const writing = document.getElementById('writing-party');
+    
+        const buttons = [backBtn, aboutMe, resume, portfolio, writing];
+        
+        
+        const baseDelay = 300; 
+        const staggerDelay = 120;
+    
+        buttons.forEach((button, index) => {
+            if (button) {
+                setTimeout(() => {
+                   
+                    button.style.transform = "translateX(0) skew(-15deg)";
+                    button.style.opacity = "1";
+                }, baseDelay + (index * staggerDelay));
+            }
+        });
+    
+        
+        if (aboutMe) aboutMe.addEventListener('click', () => window.location.href = 'myself.html');
+        if (resume) resume.addEventListener('click', () => window.location.href = 'CART.html');
+        if (portfolio) portfolio.addEventListener('click', () => window.location.href = 'Hobbies.html');
+        if (writing) writing.addEventListener('click', () => window.location.href = 'writing.html');
+    });
