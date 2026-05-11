@@ -226,6 +226,10 @@ nav {
     gap: 4px;
 }
 
+#party-select a {
+    text-decoration: none;
+}
+
 .party-icon {
     width: 100px;
     height: 50px;
@@ -293,4 +297,241 @@ nav {
     outline: none;
 }
 
-/* Red underline on selected row — like the game's cursor */
+#status-screen {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Wrapper that holds nav + card + back button together */
+#portfolio-ui {
+    position: absolute;
+    left: 0vw;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 20;
+}
+
+
+
+/* Tilted card panel */
+#status-card {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%) rotate(-8deg);
+    width: 55vw;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Wide rows — dark bar spanning full card */
+.status-row.wide {
+    background-color: #111;
+    position: relative;
+    width: 70vw;
+    height: 50vh;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 3px -16px red;
+    border-color: white;
+    border-top-width: 15px;
+    border-bottom-width: 15px;
+    border-left-width: 25px;
+    border-right-width: 25px;
+    border-style: solid;
+}
+
+
+.carousel-viewport {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.carousel-track {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.slide-num {
+    position: absolute;
+    bottom: 18px;
+    right: 24px;
+    font-family: "Anton", sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 3px;
+}
+
+.nav-bar {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #111;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    z-index: 30;
+    transform: rotate(-8deg) translateX(-10px);
+    transform-origin: left center;
+}
+
+.nav-lb, .nav-rb {
+    background: #1a1a1a;
+    border: 1.5px solid #444;
+    color: white;
+    font-family: "Anton", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.1s ease;
+}
+
+.nav-lb {
+    clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
+    padding-right: 26px;
+}
+
+.nav-rb {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+    padding-left: 26px;
+}
+
+.nav-lb:hover, .nav-rb:hover { background: #333; }
+
+.nav-arrow { color: red; }
+
+.nav-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #444;
+    transition: background 0.2s ease;
+}
+
+.nav-dot.active { background: red; }
+
+/* Back button below card */
+.back-wrap {
+    margin-left: 20px;
+    transform-origin: left center;
+}
+
+#back-btn {
+    position: relative;
+    background: #111;
+    border: none;
+    color: white;
+    font-family: "Anton", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    overflow: visible;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0.1s ease;
+}
+
+#back-btn:hover { background: #222; }
+
+.back-label {
+    position: relative;
+    z-index: 4;
+}
+
+.Web {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+
+.Writing {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+
+#contact h3 {
+    position: absolute;
+    left: 1%;
+    top: 17%;
+    font-size: 3rem;
+    color: white;
+}
+
+#contact p {
+    position: absolute;
+    font-family: "Anton", sans-serif;
+    left: 2%;
+    top: 29%;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.contact-info {
+    font-family: "Anton", sans-serif;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 2%;
+    top: 40%;
+    font-size: 1.5rem;
+}
+
+.contact-info a {
+    color: blue;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+form {
+    font-family: "Anton", sans-serif;
+    color: white;
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: black;
+    opacity: 0.6;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+}

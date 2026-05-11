@@ -2,54 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celine's Persona</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <script src="persona.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Celine's Persona</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <script src="persona.js"></script>
 </head>
 
 <body>
-<header>
-    <div class="home-content">
-        <nav>
-          <ul>
-            <li><a href="#about.html">About me</a></li>
-            <li><a href="#resume.html">Resume</a></li>
-            <li><a href="#portfolio.html">Portfolio</a></li>
-            <li><a href="#contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-</header>
-
-<main>
-  <!-- Portfolio -->
-  <div id="portfolio">
-    <button class="menu-button" id="portfolio-button">Portfolio</button>
-    <div>
-      <h3>Web Case Studies</h3>
-      <p>EECU Wise-Up Budget Calculator. This project is to build a Financial Literacy Web App that helps students
-        transition from high school to the workforce. Using real-world data from a Career API, the app should calculate
-        exactly how much money a person actually takes home after the government takes its share, and whether their
-        lifestyle choices lead to a "Surplus" (Savings) or a "Shortfall" (Debt).</p>
-      <a href="#">View projects</a>
-      </div>
-
-    <div>
-      <h3>Writing Case Studies</h3>
-      <p>.</p>
-      <a href="#">View projects</a>
+  <header>
+    <div id="bg-video">
+      <video autoplay muted loop playsinline id="bg-video3">
+        <source src="main1.mp4" type="video/mp4">
+      </video>
     </div>
 
-    <div>
-      <h3>Art Gallery</h3>
-      <p>These are art illustrations I've created in my free time, however it's only drawn traditionally.</p>
-      <a href="#">View project</a>
+    <div id="party-select">
+      <a href="webcase.html">
+        <div class="party-option" tabindex="0" id="about-me-party">
+          <span class="party-slash-red"></span>
+          <span class="party-slash-white"></span>
+          <span class="party-label">Leader</span>
+          <span class="Web">Web Case Studies</span>
+          <img src="char1.png" alt="Leader Icon" class="party-icon">
+        </div>
+      </a>
+      <a href="writing.html">
+        <div class="party-option" tabindex="0" id="writing-party">
+          <span class="party-slash-red"></span>
+          <span class="party-slash-white"></span>
+          <span class="party-label">Party</span>
+          <span class="Writing">Writing Case Studies</span>
+          <img src="char2.png" alt="Party Icon" class="party-icon">
+        </div>
+      </a>
     </div>
-  </main>
+
+    <div id="portfolio-ui">
+      <div class="nav-bar">
+        <div class="back-wrap">
+          <a id="back-btn" href="index.html">
+            <span class="back-label">◄ BACK</span>
+          </a>
+        </div>
+      </div>
 </body>
+
 </html>

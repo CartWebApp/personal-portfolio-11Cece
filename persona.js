@@ -1,60 +1,62 @@
-document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
 
-    // setup video elements
-    const intro = document.getElementById('bg-video1');
-    const menu = document.getElementById('bg-video2');
-   
-    // when intro video ends, fade it out and fade in menu video
-    intro.onended = function() {
-    
-        intro.style.opacity = "0";
-        
-    
-        menu.style.opacity = "1";
-        
- 
-        menu.play();
-    };
+        // only run video/button logic if those elements exist (home page only)
+        const intro = document.getElementById('bg-video1');
+        const menu = document.getElementById('bg-video2');
 
-    //setup button elements
-    const aboutMeButton = document.getElementById('about-me-button');
-    const resumeButton = document.getElementById('resume-button');
-    const portfolioButton = document.getElementById('portfolio-button');
-    const contactButton = document.getElementById('contact-button');
+        if (intro && menu) {
+            intro.onended = function() {
+                intro.style.opacity = "0";
+                menu.style.opacity = "1";
+                menu.play();
+            };
 
-    //slide in nav buttons after menu video starts
-    menu.onplay = function() {
-        const buttons = [aboutMeButton, resumeButton, portfolioButton, contactButton];
-        const baseDelay = 2000; // delay before first button starts sliding
-        const staggerDelay = 150; // delay between each button
-        
-        buttons.forEach((button, index) => {
-            setTimeout(() => {
-                button.style.transform = "translateX(0) skew(-15deg) rotate(-5deg)";
-            }, baseDelay + (index * staggerDelay));
-        });
+            const aboutMeButton = document.getElementById('about-me-button');
+            const resumeButton = document.getElementById('resume-button');
+            const portfolioButton = document.getElementById('portfolio-button');
+            const contactButton = document.getElementById('contact-button');
 
-        const homeTitle = document.getElementById('home-title');
-        setTimeout(() => {
-            homeTitle.style.transform = "translateY(0) rotate(20deg)";
-        }, 1500);
-    }
+            menu.onplay = function() {
+                const buttons = [aboutMeButton, resumeButton, portfolioButton, contactButton];
+                const baseDelay = 2000;
+                const staggerDelay = 150;
 
-    // add event listeners for buttons
-    aboutMeButton.addEventListener('click', () => {
-        window.location.href = 'about.html';
+                buttons.forEach((button, index) => {
+                    setTimeout(() => {
+                        button.style.transform = "translateX(0) skew(-15deg) rotate(-5deg)";
+                    }, baseDelay + (index * staggerDelay));
+                });
+
+                const homeTitle = document.getElementById('home-title');
+                if (homeTitle) {
+                    setTimeout(() => {
+                        homeTitle.style.transform = "translateY(0) rotate(20deg)";
+                    }, 1500);
+                }
+            };
+
+            if (aboutMeButton) aboutMeButton.addEventListener('click', () => window.location.href = 'about.html');
+            if (resumeButton) resumeButton.addEventListener('click', () => window.location.href = 'resume.html');
+            if (portfolioButton) portfolioButton.addEventListener('click', () => window.location.href = 'portfolio.html');
+            if (contactButton) contactButton.addEventListener('click', () => window.location.href = 'contact.html');
+        }
+
+        // carousel — only runs if the track exists on the page
+        const track = document.getElementById('carousel-track');
+        if (track) {
+            const dots = document.querySelectorAll('.nav-dot');
+            const btnLB = document.getElementById('btn-lb');
+            const btnRB = document.getElementById('btn-rb');
+            let current = 0;
+            const total = document.querySelectorAll('.carousel-slide').length;
+
+            function goTo(index) {
+                current = (index + total) % total;
+                track.style.transform = `translateX(-${current * 33.333}%)`;
+                dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            }
+
+            if (btnLB) btnLB.addEventListener('click', () => goTo(current - 1));
+            if (btnRB) btnRB.addEventListener('click', () => goTo(current + 1));
+        }
     });
-    
-    resumeButton.addEventListener('click', () => {
-        window.location.href = 'resume.html';
-    });
-    
-    portfolioButton.addEventListener('click', () => {
-        window.location.href = 'portfolio.html';
-    });
-    
-    contactButton.addEventListener('click', () => {
-        window.location.href = 'contact.html';
-    });
-
-});
