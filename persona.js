@@ -92,3 +92,38 @@
         if (portfolio) portfolio.addEventListener('click', () => window.location.href = 'Hobbies.html');
         if (writing) writing.addEventListener('click', () => window.location.href = 'writing.html');
     });
+
+    //Resume Page Animation
+    document.addEventListener("DOMContentLoaded", () => {
+  const resume = document.querySelector('.resume');
+  const downloadBtn = document.querySelector('.download-btn');
+
+  if (resume) {
+    setTimeout(() => {
+      resume.classList.add('slide-in');
+    }, 300);
+  }
+
+  if (downloadBtn) {
+    setTimeout(() => {
+      downloadBtn.classList.add('slide-in');
+    }, 500);
+  }
+});
+
+    //Contact Page Animation
+  document.addEventListener("DOMContentLoaded", () => {
+    const socialsInfo = document.querySelectorAll('.socials'); 
+
+    const baseDelay = 300; 
+        const staggerDelay = 180;
+
+
+socialsInfo.forEach((info, index) => {
+    if (info) {
+      setTimeout(() => {
+        info.classList.add('slide-in');
+      }, baseDelay + (index * staggerDelay));
+    }
+  })
+  });

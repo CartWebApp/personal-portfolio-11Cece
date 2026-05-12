@@ -54,6 +54,7 @@ button {
     height: 100%;
     object-fit: cover;
     opacity: 1;  
+    z-index: -1;
 }
 
 
@@ -524,16 +525,48 @@ form {
     font-family: "Anton", sans-serif;
     color: white;
     position: absolute;
-    right: 20%;
-    top: 30%;
+    right: 5%;
+    top: 20%;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    background-color: black;
-    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    width: 400px;
-    height: 300px;
+    width: 500px;
+    /* height: 400px; */
+    border-radius: 16px;
+}
+
+#name, #email, #message {
+    background-color: #2B2B2B;
+    border: none;
+    font-family: "Anton", sans-serif;
+    color: white;
+    padding: 8px;
+    font-size: 1rem;
+}
+#message {
+    resize: none;
+    height: 150px;
+}
+
+#submit-contact {
+    background-color: #2B2B2B;
+    border: none;
+    color: white;
+    font-family: "Anton", sans-serif;
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#name::placeholder, #email::placeholder, #message::placeholder {
+    color: white;
+    padding-left: 10px  ;
 }
 
 
@@ -543,3 +576,341 @@ form {
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
 }
 
+
+.resume {
+    background: white;
+    width: 90%;
+    max-width: 650px;
+    margin: 40px 0 0 40px;
+    max-height: 70vh;
+    overflow: scroll;
+    justify-content: left;
+}
+
+.resume-header {
+  background: #2d54a4;
+  padding: 36px 48px 36px 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  overflow: hidden;
+}
+ 
+.resume-header::before {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: -20px;
+  width: 220px;
+  height: 200%;
+  transform: skewX(-12deg);
+  opacity: 0.5;
+}
+ 
+.resume-header::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  width: 120px;
+  height: 200%;
+  background: #00385c;
+  transform: skewX(-12deg);
+  opacity: 0.7;
+}
+ 
+.photo-wrap {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  
+}
+ 
+.photo-wrap img {
+  width: 200%;
+  height: 200%;
+  object-fit: cover;
+  display: block;
+}
+ 
+.photo-placeholder {
+  font-size: 42px;
+  line-height: 1;
+}
+ 
+.header-name {
+  z-index: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+ 
+.header-name p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: white;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transform: rotate(0deg);
+}
+ 
+
+.resume-body {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+}
+ 
+
+.col-left {
+  padding: 36px 40px 48px;
+  border-right: 1px solid var(--rule);
+}
+ 
+
+.col-right {
+  padding: 36px 28px 48px;
+  background: var(--light-bg);
+}
+ 
+
+section {
+  margin-bottom: 28px;
+}
+ 
+section:last-child {
+  margin-bottom: 0;
+}
+ 
+.section-title {
+  font-family: 'GlacialIndifference', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #00385c;
+  margin-bottom: 12px;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+ 
+.summary-text {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #706f6f;
+}
+ 
+
+.exp-entry {
+  margin-bottom: 18px;
+}
+ 
+.exp-entry:last-child {
+  margin-bottom: 0;
+}
+ 
+.exp-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #706f6f;
+  margin-bottom: 1px;
+}
+ 
+.exp-date {
+  font-size: 12px;
+  color: #2d54a4;
+  margin-bottom: 6px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+}
+ 
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+}
+ 
+.exp-bullets li {
+  font-size: 13px;
+  color: #706f6f;
+  line-height: 1.65;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 4px;
+}
+ 
+.exp-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #706f6f;
+}
+ 
+
+.edu-entry {
+  margin-bottom: 16px;
+}
+ 
+.edu-entry:last-child {
+  margin-bottom: 0;
+}
+ 
+.edu-years {
+  font-size: 12px;
+  color: #2d54a4;
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-family: 'Roboto Mono', monospace;
+}
+ 
+.edu-school {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color:#545454;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 2px;
+}
+ 
+.edu-detail {
+  font-size: 12px;
+  color: #706f6f;
+  line-height: 1.5;
+}
+ 
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+ 
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #706f6f;
+  margin-bottom: 9px;
+  line-height: 1.45;
+}
+ 
+.contact-list li a {
+  color: var(--navy);
+  text-decoration: none;
+  word-break: break-all;
+}
+ 
+.contact-list li a:hover {
+  text-decoration: underline;
+}
+ 
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+ 
+.contact-icon svg {
+  width: 11px;
+  height: 11px;
+  fill: white;
+}
+ 
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+ 
+.skills-list li {
+  font-size: 13px;
+  color: #706f6f;
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 3px;
+}
+ 
+.skills-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #706f6f;
+}
+ 
+.award-list {
+  list-style: none;
+  padding: 0;
+}
+ 
+.award-list li {
+  font-size: 13px;
+  color: #706f6f;
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 4px;
+}
+ 
+.award-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #706f6f;
+}
+ 
+.resume-footer {
+  background:#2d54a4;
+  height: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 10px 20px;
+    background-color: #58DDFF;
+    color: white;
+    font-family: "Anton", sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+
+.resume, .download-btn {
+  transform: translateX(-400px);
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.resume.slide-in, .download-btn.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.socials {
+    transform: translateX(-400px);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.socials.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
